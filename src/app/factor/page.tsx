@@ -97,7 +97,7 @@ export default function SignIn() {
          
 
           {/* Sign in button */}
-          <Link href="#">
+          <Link href="/reset">
           <button
             type="submit"
             className="w-full bg-[#2970FF] hover:bg-[#1F5ECC] 

@@ -86,10 +86,10 @@ export default function SignIn() {
             />
           </div>
 
-          {/* Remember me + Forgot password */}
+          {/* Remember me and Forgot password */}
           <div className="flex flex-wrap items-center justify-between text-sm gap-2">
             <label className="flex items-center gap-2 text-white">
-              <input type="checkbox" className="rounded border-white" />
+              <input type="checkbox" className="rounded border-white"/>
               Remember me
             </label>
             <Link

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+
 import React, { useState } from "react";
 
 export default function Forgotpassword() {
@@ -44,19 +44,12 @@ export default function Forgotpassword() {
 
         {/* Section */}
         <section
-          className="gap-[10px] w-full sm:h-[577px] bg-[#2C2C2C] 
+          className="gap-[5px] w-full sm:h-[577px] bg-[#2C2C2C] 
             border border-[#ACACAC] rounded-[12px] p-6 sm:p-8 md:p-12 flex flex-col lg:h-[477px]"
         >
-          <div className="rounded-[10.75px] opacity-100 bg-[#2970FF] w-[87px] sm:w-[60px] h-[80px] flex items-center justify-center">
-            <Image
-              src="/nomovector.png"
-              alt="Vector Nomo"
-              width={30}
-              height={63}
-            />
-          </div>
+          
 
-          <div className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] shadow-lg py-6 sm:py-8 md:py-10">
+          <div className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] shadow-lg  ">
             {/* Header */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-white">
               forgot password
@@ -71,6 +64,23 @@ export default function Forgotpassword() {
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
+            
+            <div>
+              <label className="block text-sm font-medium text-white mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 
+                  focus:ring-2 focus:ring-[#2970FF] outline-none placeholder-[#BDBDBD]"
+                placeholder="Enter your Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+
+
             <div>
               <label className="block text-sm font-medium text-white mb-1">
                 Email
@@ -87,7 +97,7 @@ export default function Forgotpassword() {
             </div>
 
             {/* Submit button */}
-            <Link href="/factor">
+            <Link href="/reset">
               <button
                 type="submit"
                 className="w-full bg-[#2970FF] hover:bg-[#1F5ECC] 
