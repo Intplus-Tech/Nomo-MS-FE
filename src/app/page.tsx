@@ -16,7 +16,7 @@ export default function SignIn() {
     <main
       className="h-screen flex flex-col md:flex-row items-center justify-between 
       max-w-[1440px] mx-auto p-6 sm:p-10 md:p-[60px] 
-      bg-[#1B1B1B] bg-[url('/vectorstroke.png')] bg-no-repeat bg-center bg-cover overflow-hidden"
+      bg-[#1B1B1B] bg-[url('/grouplines.png')] bg-no-repeat bg-center bg-cover overflow-hidden"
     >
       {/* Left Section */}
       <section className="mt-10 md:mt-28 flex flex-col items-start px-4 sm:px-6 md:px-0">
@@ -48,7 +48,7 @@ export default function SignIn() {
       >
         <div className="w-full max-w-md shadow-lg">
           {/* Header */}
-          <h2 className="text-3xl font-bold text-white">Sign in</h2>
+          <h2 className="text-3xl font-bold font-sfpro text-white">Sign in</h2>
           <h2 className="text-3xl font-bold text-white mb-6">
             to your account
           </h2>
