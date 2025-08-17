@@ -101,7 +101,7 @@ export default function SignIn() {
           <button
             type="submit"
             className="w-full bg-[#2970FF] hover:bg-[#1F5ECC] 
-            text-white rounded-lg py-2 font-medium transition"
+            text-white rounded-lg py-2 font-medium transition font-myfont"
           >
             Sign in
           </button>

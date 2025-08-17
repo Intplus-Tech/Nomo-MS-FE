@@ -129,3 +129,10 @@
   font-weight: 200;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/MyCustomFont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

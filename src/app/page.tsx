@@ -101,6 +101,7 @@ export default function SignIn() {
           </div>
 
           {/* Sign in button */}
+          <Link href="/invoice">
           <button
             type="submit"
             className="w-full bg-[#2970FF] hover:bg-[#1F5ECC] 
@@ -108,6 +109,7 @@ export default function SignIn() {
           >
             Sign in
           </button>
+          </Link>
         </form>
       </section>
     </main>

@@ -1,15 +1,17 @@
 "use client";
 
 import Link from "next/link";
-
 import React, { useState } from "react";
+import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 
-export default function Forgotpassword() {
+export default function Reset() {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ email });
+    console.log({ email, password });
   };
 
   return (
@@ -25,7 +27,6 @@ export default function Forgotpassword() {
           href="/"
           className="flex items-center text-white hover:text-[#2970FF] transition mb-4"
         >
-          
           <svg
             width="24"
             height="24"
@@ -47,65 +48,81 @@ export default function Forgotpassword() {
           className="gap-[5px] w-full sm:h-[577px] bg-[#2C2C2C] 
             border border-[#ACACAC] rounded-[12px] p-6 sm:p-8 md:p-12 flex flex-col lg:h-[477px]"
         >
-          
-
-          <div className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] shadow-lg  ">
+          <div className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] shadow-lg">
             {/* Header */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-white">
-              forgot password
+              Reset password
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-[20px] font-normal text-white mb-2">
-              Enter your email address to reset your
-            </p>
-            <p className="text-base sm:text-lg md:text-xl lg:text-[20px] font-normal text-white">
-              password
+              Create a new password
             </p>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-5">
-            
+          <form onSubmit={handleSubmit} className="space-y-4 mt-10">
+            {/* Password Input */}
+            <div>
+              <label className="block text-sm font-medium text-white mb-1">
+                New Password
+              </label>
+              <div className="relative flex items-center">
+                <span className="absolute left-3 text-gray-400">
+                  <Lock size={20} />
+                </span>
+                <input
+                  type={showPassword ? "text" : "password"}
+                  className="w-full rounded-lg border border-gray-300 px-10 py-2 
+                    focus:ring-2 focus:ring-[#2970FF] outline-none placeholder-[#BDBDBD] bg-transparent text-white"
+                  placeholder="Enter new password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+                <button
+                  type="button"
+                  className="absolute right-3 text-gray-400"
+                  onClick={() => setShowPassword((prev) => !prev)}
+                >
+                  {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                </button>
+              </div>
+            </div>
+
+            {/* Email Input */}
             <div>
               <label className="block text-sm font-medium text-white mb-1">
                 Email
               </label>
-              <input
-                type="email"
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 
-                  focus:ring-2 focus:ring-[#2970FF] outline-none placeholder-[#BDBDBD]"
-                placeholder="Enter your Email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+              <div className="relative flex items-center">
+                <span className="absolute left-3 text-gray-400">
+                  <Mail size={20} />
+                </span>
+                <input
+                  type="email"
+                  className="w-full rounded-lg border border-gray-300 px-10 py-2 
+                    focus:ring-2 focus:ring-[#2970FF] outline-none placeholder-[#BDBDBD] bg-transparent text-white"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <button
+                  type="button"
+                  className="absolute right-3 text-gray-400"
+                  onClick={() => setShowPassword((prev) => !prev)}
+                >
+                  {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                </button>
+              </div>
             </div>
 
-
-            <div>
-              <label className="block text-sm font-medium text-white mb-1">
-                Email
-              </label>
-              <input
-                type="email"
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 
-                  focus:ring-2 focus:ring-[#2970FF] outline-none placeholder-[#BDBDBD]"
-                placeholder="Enter your Email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-
-            {/* Submit button */}
-            <Link href="/reset">
-              <button
-                type="submit"
-                className="w-full bg-[#2970FF] hover:bg-[#1F5ECC] 
-                  text-white rounded-lg py-2 font-medium transition"
-              >
-                verify
-              </button>
-            </Link>
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full bg-[#2970FF] text-white py-2 rounded-lg hover:bg-[#1f5cd6] transition mt-10"
+            >
+              Reset Password
+            </button>
           </form>
         </section>
       </div>
