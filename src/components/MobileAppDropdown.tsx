@@ -5,9 +5,9 @@ export default function MobileAppDropdown() {
 
   return (
     <div
-      className="absolute top-0  
-        w-[290px] h-[116px] bg-white rounded-[6px] shadow 
-        flex flex-col gap-[15px] p-[20px] z-10"
+      className="absolute top-0 w-[90%] sm:w-[290px] 
+        h-auto sm:h-[116px] bg-white rounded-[6px] shadow 
+        flex flex-col gap-3 sm:gap-[15px] p-4 sm:p-[20px] z-10"
     >
       {mobilePlatforms.map((platform, i) => (
         <label
@@ -15,7 +15,7 @@ export default function MobileAppDropdown() {
           className="flex items-center gap-2 cursor-pointer"
         >
           <input type="checkbox" className="w-4 h-4" />
-          <span className="font-[Mulish] text-[16px] leading-[18px] text-gray-800">
+          <span className="font-[Mulish] text-sm sm:text-[16px] leading-[18px] text-gray-800">
             {platform}
           </span>
         </label>

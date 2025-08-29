@@ -33,8 +33,8 @@ export default function ConsumerDropdown({ subOpen }: { subOpen: string | null }
     <>
       {subOpen === "consumer" && (
         <div
-          className="absolute top-[3.2rem] left-[440px] 
-            w-[420px] bg-white rounded-[6px] shadow 
+          className="absolute  left-0 
+            w-full sm:w-[400px] lg:w-[420px] bg-white rounded-[6px] shadow 
             flex flex-col gap-[15px] p-[20px] z-20"
         >
           {consumerApps.map((app, idx) => (
@@ -46,7 +46,7 @@ export default function ConsumerDropdown({ subOpen }: { subOpen: string | null }
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <input type="checkbox" className="w-4 h-4 accent-[#091440]" />
-                  <h2 className="font-[Mulish] font-semibold text-[16px] leading-[18px] text-gray-900">
+                  <h2 className="font-[Mulish] font-semibold text-[15px] sm:text-[16px] leading-[18px] text-gray-900">
                     {app.title}
                   </h2>
                 </div>
@@ -63,23 +63,23 @@ export default function ConsumerDropdown({ subOpen }: { subOpen: string | null }
               </div>
 
               {/* Description */}
-              <p className="font-[Mulish] text-[16px] leading-[18px] text-gray-600 ml-6">
+              <p className="font-[Mulish] text-[14px] sm:text-[16px] leading-[18px] text-gray-600 ml-6">
                 {app.description}
               </p>
             </div>
           ))}
 
-          {/* Nested dropdown positioned beside */}
+          {/* Nested dropdown — stack on mobile, beside on desktop */}
           {nestedOpen === "mobile" && (
-            <div className="absolute top-0 left-[420px]">
+            <div className="relative lg:absolute lg:top-0 lg:left-[420px] w-full lg:w-auto mt-3 lg:mt-0">
               <MobileAppDropdown />
             </div>
           )}
 
           {nestedOpen === "web" && (
-            <div className="absolute top-0 left-[420px]">
+            <div className="relative lg:absolute lg:top-0 lg:left-[420px] w-full lg:w-auto mt-3 lg:mt-0">
               <WebAppDropdown />
-             </div>
+            </div>
           )}
         </div>
       )}

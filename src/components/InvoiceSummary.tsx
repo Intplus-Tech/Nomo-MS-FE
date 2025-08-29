@@ -12,7 +12,7 @@ export default function InvoiceSummary() {
   return (
     <main className="max-w-[1134px] mx-auto  mt-6">
       <section
-        className=" w-[175px] h-[30px] text-[#596D81] opacity-100 flex items-center justify-center rounded font-['Source_Sans_Pro'] font-normal text-[24px] leading-[100%] tracking-[0%] capitalize ">
+        className=" w-[175px] h-auto text-[#596D81] opacity-100 flex items-center justify-center rounded font-['Source_Sans_Pro'] font-normal text-[24px] leading-[100%] tracking-[0%] capitalize ">
         Invoice Summary
       </section>
       <section className="flex mt-4">

@@ -1,46 +1,40 @@
-"use Client";
+"use client";
 
 import { Button } from "./ui/button";
-
 
 export default function DevelopBox() {
   return (
     <section>
       {/* development */}
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-12 items-center justify-between py-2 px-4">
 
-      <div className=" flex gap-12 items-center justify-around py-2 pr-10">
-      <div className="flex  items-center gap-4 border border-gray-400 w-[450px] h-[30px] p-2 justify-center ml-8">
-          <div className="flex gap-2">
+        {/* Checkbox group */}
+        <div className="flex flex-wrap items-center gap-4 border border-gray-400 w-full sm:w-[450px] min-h-[40px] p-2 justify-center">
+          <div className="flex items-center gap-2">
             <input type="checkbox" />
-            <p>Development</p>
+            <p className="text-sm sm:text-base">Development</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <input type="checkbox" />
-            <p>Design</p>
+            <p className="text-sm sm:text-base">Design</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <input type="checkbox" />
-            <p>Research</p>
+            <p className="text-sm sm:text-base">Research</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <input type="checkbox" />
-            <p>Marketing</p>
+            <p className="text-sm sm:text-base">Marketing</p>
           </div>
         </div>
-        
+
+        {/* Button */}
         <Button
-          className="w-[71px] h-[29px]  bg-[#2970FF]  opacity-100 rounded-[5px] 
-          gap-[10px] px-[10px] py-[7px]flex items-center justify-centertext-white p-2
-      ">
-        Add items
+          className="w-full sm:w-[120px] h-[36px] bg-[#2970FF] text-white rounded-[5px] flex items-center justify-center"
+        >
+          Add items
         </Button>
       </div>
-
-      
-
-
     </section>
-   
-  
-  )
-};
+  );
+}
