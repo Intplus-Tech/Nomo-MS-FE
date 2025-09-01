@@ -33,13 +33,13 @@ export default function Manage() {
         `}
       >
         <div className={`${isMobile ? "w-full text-center" : "flex justify-start"}`}>
-          <p className="text-base md:text-lg font-medium">Manage</p>
+          <p className="text-base md:text-lg font-medium -ml-2">Manage</p>
         </div>
 
         <Link href="/Create" className={`${isMobile ? "w-full" : ""}`}>
           <Button
             className="bg-blue-700 w-full md:w-[208px] h-[44px] rounded-md text-white 
-              font-semibold text-sm md:text-base leading-none tracking-normal text-center px-6"
+              font-semibold text-sm md:text-base leading-none tracking-normal text-center px-6 -mr-3"
           >
             Create New Invoice
           </Button>
@@ -65,7 +65,7 @@ export default function Manage() {
             {navItems.map((item) => (
               <li
                 key={item}
-                className="relative cursor-pointer hover:text-blue-700 transition-colors"
+                className="relative cursor-pointer hover:text-blue-700 transition-colors -bottom-6 -ml-3"
                 onClick={() => setActive(item)}
               >
                 <span>{item}</span>

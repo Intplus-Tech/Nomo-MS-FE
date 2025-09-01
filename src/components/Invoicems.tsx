@@ -48,15 +48,17 @@ const invoices: Invoice[] = [
 
 export default function Invoicems() {
   return (
-    <main className="bg-[#F9FAFA] min-h-screen">
+    <main className="bg-[#F9FAFA] min-h-screen mt-2">
       <section className="h-fit w-full">
-        {/* ✅ Top Header */}
-        <div className="w-full max-w-[1134px] mx-auto mt-4 rounded h-auto sm:h-[112px] flex flex-col sm:flex-row items-start sm:items-center justify-between px-5 gap-3">
+        {/*  Top Header */}
+        <div className="w-full max-w-[1134px] mx-auto mt-4 rounded h-auto sm:h-[112px] flex flex-col sm:flex-row items-start sm:items-center justify-between px-5 gap-10 ">
           {/* Left title */}
-          <h3 className="text-lg font-semibold text-[#091440]">Invoice Ms</h3>
+          <h3 className="text-lg font-semibold text-[#091440] flex-1 -ml-4">
+            Invoice Ms
+          </h3>
 
           {/* Right buttons */}
-          <div className="flex gap-3 sm:gap-4 flex-wrap">
+          <div className="flex gap-3 sm:gap-4 flex-wrap flex-none -mr-5">
             {/* Filter button */}
             <button className="flex items-center justify-center gap-2 px-3 sm:w-[89px] h-[30px] border border-[#E6EAED] bg-white rounded">
               <span className="text-[#091440] text-sm">Filter</span>
@@ -71,8 +73,9 @@ export default function Invoicems() {
           </div>
         </div>
 
-        {/* ✅ Invoice Cards */}
-        <div className="px-3 sm:px-6 mt-4 space-y-2 flex flex-col items-center justify-center">
+
+        {/*  Invoice Cards */}
+        <div className="px-3 sm:px-6   flex flex-col items-center justify-center relative">
           {invoices.map((inv) => (
             <button
               key={inv.id}
@@ -135,7 +138,7 @@ export default function Invoicems() {
           ))}
         </div>
 
-        {/* ✅ Pagination */}
+       
         <div className="flex flex-col sm:flex-row justify-between items-center bg-[#FFFFFF] mx-auto max-w-[1134px] h-auto sm:h-[60px] mt-20 px-4 py-2 gap-4">
           <p className="text-sm">1-05 of 18 items</p>
 

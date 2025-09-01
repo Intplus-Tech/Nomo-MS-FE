@@ -36,17 +36,14 @@ export default function SignIn() {
       {/* Left Section */}
       <section className="mt-10 md:mt-28 flex flex-col items-start px-4 sm:px-6 md:px-0">
         <div className="w-full max-w-[416px] h-auto gap-3">
-          <div
-            className="rounded-[14.75px] opacity-100 bg-[#2970FF] 
-            w-[97px] sm:w-[110px] h-[80px] flex items-center justify-center"
-          >
-            <Image
-              src="/nomovector.png"
-              alt="Vector Nomo"
-              width={20}
-              height={63}
-            />
-          </div>
+          <div className="rounded-lg opacity-100 bg-[#2970FF] flex items-center justify-center h-[70px] w-[87px] p-3">
+                                
+          <Image
+           src="/nomovector.png"
+           alt="Vector Nomo"
+           width={69}
+           height={84}/>
+         </div>
           <h2 className="font-medium text-[50px] sm:text-[65px] md:text-[87px] text-[#2970FF] whitespace-nowrap">
             Nomos OS
           </h2>
@@ -67,8 +64,8 @@ export default function SignIn() {
           <h2 className="text-3xl text-[48px] font-bold text-white mb-2">
           verification code
           </h2>
-          <p className="text-base sm:text-lg  lg:text-[20px] font-normal text-white max-w-[317px] ">Enter the code sent to your email</p>
-          <p className="text-base sm:text-lg  lg:text-[20px] font-normal text-white mb-2">address. <span className="font-inter font-medium text-[20px] leading-[100%] tracking-[0]">
+          <p className="text-base sm:text-lg  lg:text-[20px] font-normal text-[#BDBDBD] max-w-[317px] ">Enter the code sent to your email</p>
+          <p className="text-base sm:text-lg  lg:text-[20px] font-normal text-[#BDBDBD] mb-2">address. <span className="font-inter font-medium text-[20px] leading-[100%] tracking-[0] text-white">
             chikeobi@gmail.com.
           </span>
  </p>
@@ -91,7 +88,7 @@ export default function SignIn() {
           ))}
          
         </div>
-          <p className="text-[14px] text-gray-400"> <span>Didn&rsquo;t Received Code?</span><span className="font-inter font-medium text-[14px] leading-[20px] tracking-[0] text-white">Resend</span> (30s)</p>
+          <p className="text-[14px] text-[#BDBDBD]"> <span>Didn&rsquo;t Received Code?</span><span className="font-inter font-medium text-[14px] leading-[20px] tracking-[0] text-white">Resend</span> (30s)</p>
         </div>
 
          

@@ -53,7 +53,7 @@ export default function Reset() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-white">
               Reset password
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-[20px] font-normal text-white mb-2">
+            <p className="text-base sm:text-lg md:text-xl lg:text-[20px] font-normal text-[#BDBDBD] mb-2">
               Create a new password
             </p>
           </div>
@@ -62,10 +62,10 @@ export default function Reset() {
           <form onSubmit={handleSubmit} className="space-y-4 mt-10">
             {/* Password Input */}
             <div>
-              <label className="block text-sm font-medium text-white mb-1">
+              <label className="block text-sm font-medium text-[#F5F5F5] mb-1">
                 New Password
               </label>
-              <div className="relative flex items-center">
+              <div className="relative flex items-center"> 
                 <span className="absolute left-3 text-gray-400">
                   <Lock size={20} />
                 </span>
@@ -90,8 +90,8 @@ export default function Reset() {
 
             {/* Email Input */}
             <div>
-              <label className="block text-sm font-medium text-white mb-1">
-                Email
+              <label className="block text-sm font-medium text-[#F5F5F5] mb-1">
+                Re-Enter new password
               </label>
               <div className="relative flex items-center">
                 <span className="absolute left-3 text-gray-400">
@@ -101,7 +101,7 @@ export default function Reset() {
                   type="email"
                   className="w-full rounded-lg border border-gray-300 px-10 py-2 
                     focus:ring-2 focus:ring-[#2970FF] outline-none placeholder-[#BDBDBD] bg-transparent text-white"
-                  placeholder="Enter your email"
+                  placeholder="Enter new password"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
